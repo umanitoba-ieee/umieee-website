@@ -36,7 +36,7 @@ h2 {
 .section-desc {
     color: var(--text-muted);
     font-size: 1.1rem;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 40px auto;
 }
 
@@ -548,5 +548,67 @@ footer {
     }
     #intro h1 {
         font-size: 2.2rem;
+    }
+}
+
+
+/* SPLIT LAYOUT ENGINE */
+.split-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Forces text/image to take up equal space */
+.hero-text, .split-text, .hero-image-side, .split-image {
+    flex: 1;
+}
+
+.hero-text {
+    /* text-align: left; */
+}
+
+.reverse {
+    flex-direction: row-reverse; /* Alternates image/text side for visual interest */
+}
+
+/* IMAGE CONSTRAINTS */
+.hero-image-side img, .split-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* ADVANTAGES GALLERY ROW */
+.image-gallery-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.image-gallery-row img {
+    flex: 1;
+    width: 50%; /* Puts them side-by-side */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE FIX (Crucial) */
+@media (max-width: 900px) {
+    .split-container, .image-gallery-row {
+        flex-direction: column; /* Stacks them back on mobile/tablet */
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+
+    .image-gallery-row img {
+        width: 100%;
     }
 }
