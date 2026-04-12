@@ -3,177 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UMIEEE Homepage</title>
+    <title>UMIEEE | University of Manitoba IEEE Student Branch</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="banner">
-            <!-- <div class="logo">Logo</div> -->
-            <img src="assets/logo_umieee.png">
+            <a href="#" class="logo-link">
+                <img src="assets/logo_umieee.png" alt="UMIEEE Logo">
+            </a>
             <nav>
                 <ul>
-                    <!-- <li><a href="#about">About</a></li> -->
                     <li><a href="#mission">Our Mission</a></li>
-                    <li><a href="#advantages">IEEE Advantages</a></li>
-                    <li><a href="#join">Join Us</a></li>
+                    <li><a href="#advantages">Advantages</a></li>
+                    <li><a href="#events">Past Events</a></li>
                     <li><a href="#executives">Executives</a></li>
-                    <!-- <li><a href="#sponsors">Sponsors</a></li> -->
+                    <li><a href="#join" class="nav-join-btn">Join Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="intro">
-            <img id="logo" src="assets/logo_no_text.svg"/>
-            <h1>University Of Manitoba</h1>
-            <h1>IEEE Student Branch</h1>
-        </section>
-        
-        <section id="join" class="section-blue-2">
-            <h2>Join Links</h2>
-
-            <a href="http://linktr.ee/umieee" target="_blank" rel="noopener noreferrer">
-                <button>Linktree</button>
-            </a>
-            <a href="https://www.instagram.com/ieee_umanitoba/" target="_blank" rel="noopener noreferrer">
-                <button>UMIEEE Instragram</button>
-            </a>
-            <!-- <a href="https://edu.ieee.org/ca-umieee/about-ieee/join-ieee/" target="_blank" rel="noopener noreferrer">
-                <button>Join Here</button>
-            </a> -->
-            <a href="https://discord.gg/JSEJjVHKaF" target="_blank" rel="noopener noreferrer">
-              <button>UMIEEE Discord</button>
-            </a>
-            <a href="https://forms.gle/uhmRYXXjPnfHDY2T6" target="_blank" rel="noopener noreferrer">
-              <button>Lounge Access Form</button>
-            </a>
-        </section>
-
-        <section id="mission" class="section-blue-1" style="color: white;">
-            <h2>Our Mission</h2>
-            <p>University of Manitoba Institute of Electrical and Electronics Engineers Student Branch (UMIEEE) is a non profit organization managed by a team of dedicated student volunteers. Our mission is to provide students with the space and equipment necessary to maximize learning opportunities and enhance education. UMIEEE provides a laboratory environment congruent to the Electrical and Computer Engineering labs operated by the University of Manitoba, enabling students to expand their knowledge outside of the classroom. Furthermore, UMIEEE offers a generous lounge space for students to work, socialize, and relax.</p>
-            <p>UMIEEE strives to engage students through workshops and networking events, which allow students to enrich their knowledge and develop their professional communication skills. Each academic year we host a handful of technical workshops about the Arduino and Raspberry Pi embedded devices, as well as the typesetting language LaTeX. We also host multiple networking events each semester in which professional engineers practicing electrical and computer engineering are invited to speak about their careers and industries. Students are given the opportunity to ask questions and speak to these professionals, and in doing so, develop their professional communication skills and gain a richer understanding of industry jobs and opportunities. These technical workshops and networking events give students the opportunity to learn from their peers and communicate directly with employers from industry.</p>
-            <p>UMIEEE intends to continue to upgrade our equipment and facilities and to strengthen relationships between the student body and industry, to offer students the best opportunities for learning and professional development.</p>
-            <p>This section outlines our mission and goals.</p>
-        </section>
-
-        <section id="advantages" class="section-blue-1">
-            <h2>IEEE Advantages</h2>
-            <!-- <img src="assets/edcel.png"> -->
-            <p>Members of the University of Manitoba IEEE branch are offered several benefits:</p>
-            <ul>
-              <li>
-                Lounge area (for studying, relaxing, hanging out, etc.)
-                <ul>
-                  <li>Canteen (prices posted inside)</li>
-                  <li>Classroom whiteboards and markers</li>
-                  <li>Massage Chair (to wash your anxiety/frustration away)</li>
-                  <li>External monitors for extra productivity</li>
-                  <li>Large conference table for meetings</li>
-                  <!-- <li>Updated lounge and modernized lounge space</li> -->
-                </ul>
-              </li>
-              <li>
-                Lab Area (fully-equipped electronics laboratory)
-                <ul>
-                  <li>Soldering equipment</li>
-                  <li>Arduino boards, Raspberry Pi</li>
-                  <li>High-performance computer</li>
-                </ul>
-              </li>
-              <ul>
-              <li>Free-of-charge lockers</li>
-              <li>Partnerships with other technical societies (e.g. UMSAE, UMSATS, UMRT)</li>
-              <li>Free or otherwise cheaper workshop prices</li>
-              </ul>
-            </ul>
-        </section>
-
-        <section id="join" class="section-blue-4">
-            <h2>Join Us</h2>
-            <p>Interested in joining UMIEEE? Check out the instructions below!</p>
-            <ol style="text-align: left;">
-              <li>Navigate to the <a href="https://www.ieee.org/membership_services/membership/join/index.html" target=".">Join IEEE webpage</a></li>
-              <li>Select the "JOIN AS A STUDENT” option</li>
-              <!-- <li>If you do not already have an IEEE account, you must make one here;</li> -->
-              <!-- <li>Once your account has been made, fill out the fields on the “Join” application as shown on screen;</li> -->
-              <!-- <li>Under the “Referrals” section, enter your referrals credentials;</li> -->
-              <li>Create your IEEE account and complete your membership order</li>
-              <!-- <li>(Optional) Join EGM (Engineers Geoscientists Manitoba, formerly known as APEGM), as a student member.;</li> -->
-              <li>Complete our <a href="https://forms.gle/uhmRYXXjPnfHDY2T6" target=".">UMIEEE membership form</a>. Have your IEEE membership number ready</li>
-              <li>Join the <a href="https://discord.com/invite/JSEJjVHKaF" target=".">UMIEEE Discord Server</a></li>
-              <li>Follow the <a href="https://www.instagram.com/ieee_umanitoba/" target="_blank" rel="noopener noreferrer">UMIEEE Instragram</a></li>
-              <!-- <li>Once you’ve done these steps, sit tight and keep an eye on your email! We’re working hard to get you validated in our system!</li> -->
-            </ol>
-
-            <a href="http://linktr.ee/umieee" target="_blank" rel="noopener noreferrer">
-                <button>Linktree</button>
-            </a>
-            <a href="https://www.instagram.com/ieee_umanitoba/" target="_blank" rel="noopener noreferrer">
-                <button>UMIEEE Instragram</button>
-            </a>
-            <!-- <a href="https://edu.ieee.org/ca-umieee/about-ieee/join-ieee/" target="_blank" rel="noopener noreferrer">
-                <button>Join Here</button>
-            </a> -->
-        </section>
-
-        <section id="executives" class="section-blue-1">
-            <h2>Executives Committee</h2>
-            <div class="executives-container">
-              <div class="executive-card">
-                <img src="assets/ghrum.png" alt="Placeholder Executive Photo">
-                <p class="role">Chair</p>
-                <p class="name">Ghrum Yemessghen</p>
-              </div>
-              <div class="executive-card">
-                <img src="assets/abraham.png" alt="Placeholder Executive Photo">
-                <p class="role">Vice-Chair</p>
-                <p class="name">Abraham Ahmed</p>
-              </div>
-              <div class="executive-card">
-                <img src="assets/connor.png" alt="Placeholder Executive Photo">
-                <p class="role">Treasurer</p>
-                <p class="name">Connor Pagtakhan</p>
-              </div>
-              <div class="executive-card">
-                <img src="assets/mj.png" alt="Placeholder Executive Photo">
-                <p class="role">Secretary</p>
-                <p class="name">MJ Kang</p>
-              </div>
-              <div class="executive-card">
-                <img src="assets/jonah.png" alt="Placeholder Executive Photo">
-                <p class="role">Lab Manager</p>
-                <p class="name">Jonah St. Hilaire</p>
-              </div>
-              <div class="executive-card">
-                <img src="assets/edcel.png" alt="Placeholder Executive Photo">
-                <p class="role">Lounge Manager</p>
-                <p class="name">Edcel Abanto</p>
-              </div>
+        <section id="intro" class="section-white">
+            <div class="hero-content">
+                <img id="logo" src="assets/logo_no_text.svg" alt="IEEE Logo"/>
+                <h1>University Of Manitoba</h1>
+                <h2 class="subtitle">IEEE Student Branch</h2>
+                <div class="hero-actions">
+                    <a href="#join" class="btn btn-primary">Become a Member</a>
+                    <!-- <a href="http://linktr.ee/umieee" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Linktree</a> -->
+                     <a href="#contact" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/ieeextreme.jpg" alt="UMIEEE Team at IEEEXtreme">
             </div>
         </section>
 
-        <section id="sponsors" class="section-blue-2">
-            <h2>Sponsors</h2>
-            <p>UMIEEE thanks our sponsors for their continued support in funding specialized equipment and workspace materials used by UMIEEE members.</p>
-            <div class="sponsors">
-              <img src="assets/sponsors/eef.webp">
-              <img src="assets/sponsors/ece_dept.webp">
-              <img src="assets/sponsors/icf.png">
-              <img src="assets/sponsors/ieee_winnipeg.webp">
-              <img src="assets/sponsors/digikey.webp">
-              <img src="assets/sponsors/uofm.png">
+        <section id="mission" class="section-blue">
+            <div class="container text-center">
+                <h2>Our Mission</h2>
+                <div class="mission-text">
+                    <p>University of Manitoba Institute of Electrical and Electronics Engineers Student Branch (UMIEEE) is a non-profit organization managed by a team of dedicated student volunteers. Our mission is to provide students with the space and equipment necessary to maximize learning opportunities and enhance education. UMIEEE provides a laboratory environment congruent to the Electrical and Computer Engineering labs operated by the University of Manitoba, enabling students to expand their knowledge outside of the classroom.</p>
+                    <p>UMIEEE strives to engage students through workshops and networking events, enriching knowledge and developing professional communication skills. Each academic year we host technical workshops covering Arduino, Raspberry Pi, embedded devices, and LaTeX typesetting. Our networking events connect students directly with professional practicing engineers.</p>
+                </div>
+                <img src="assets/workshop.png" alt="UMIEEE Workshop" class="feature-image">
             </div>
+        </section>
+
+        <section id="advantages" class="section-white">
+            <div class="container text-center">
+                <h2>IEEE Advantages</h2>
+                <p class="section-desc">Members of the University of Manitoba IEEE branch are offered several exclusive benefits and spaces.</p>
+                
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <h3>Lounge Area</h3>
+                        <p>A dedicated space for studying, relaxing, and hanging out.</p>
+                        <ul class="advantage-list">
+                            <li>Canteen (prices posted inside)</li>
+                            <li>Classroom whiteboards and markers</li>
+                            <li>Massage Chair for stress relief</li>
+                            <li>External monitors for productivity</li>
+                            <li>Large conference table for meetings</li>
+                        </ul>
+                    </div>
+                    <div class="advantage-card">
+                        <h3>Lab Area</h3>
+                        <p>A fully-equipped electronics laboratory for your projects.</p>
+                        <ul class="advantage-list">
+                            <li>Soldering equipment and stations</li>
+                            <li>Arduino boards & Raspberry Pi's</li>
+                            <li>High-performance computer access</li>
+                        </ul>
+                    </div>
+                    <div class="advantage-card">
+                        <h3>Extra Perks</h3>
+                        <p>Additional benefits of being a UMIEEE member.</p>
+                        <ul class="advantage-list">
+                            <li>Free-of-charge secure lockers</li>
+                            <li>Partnerships with <a style="font-weight: bold; text-decoration: none; color: inherit;" href="https://umrt.ca/">UMRT</a>, 
+                                <a style="font-weight: bold; text-decoration: none; color: inherit;" href="https://umsats.ca/">UMSATS</a>,  
+                                <a style="font-weight: bold; text-decoration: none; color: inherit;" href="https://www.umsae.com/">UMSAE</a>,  
+                            <li>Discounted or free workshop entry</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="assets/lab.jpg" alt="Lab Work" class="feature-image mt-4">
+                <img src="assets/lounge.jpg" alt="UMIEEE Lounge" class="feature-image mt-4">
+            </div>
+        </section>
+
+        <section id="events" class="section-light-gray">
+            <div class="container text-center">
+                <h2>Event Highlights</h2>
+                <p class="section-desc">Take a look at some of the recent workshops and competitions hosted by our branch.</p>
+            </div>
+            
+            <div class="events-scroll-wrapper">
+                <div class="events-container">
+                    <a href="https://umake.umieee.ca/" target="_blank" class="event-card">
+                        <img src="assets/events/umake_title.webp" alt="UMake Competition">
+                        <div class="event-info">
+                            <h3>UMake 2026</h3>
+                            <p class="event-date">March 6-7, 2026</p>
+                            <p class="event-desc">First Hardware Hackathon at UofM</p>
+                        </div>
+                    </a>
+
+                    <a href="https://blackhole.umieee.ca/" class="event-card poster">
+                        <img src="assets/events/blackhole.jpg" alt="Black Hole Social">
+                        <div class="event-info">
+                            <h3>Black Hole Social</h3>
+                            <p class="event-date">January 30, 2026</p>
+                            <!-- <i>First Hardware Hackathon at University of Manitoba</i> -->
+                        </div>
+                    </a>
+
+                    <div class="event-card">
+                        <img src="assets/events/ieeex_19.0.jpg" alt="IEEEXtreme 19.0">
+                        <div class="event-info">
+                            <h3>IEEEXtreme 19.0</h3>
+                            <p class="event-date">October 24-25, 2025</p>
+                            <p class="event-desc">Annual 24-Hour Programming Competition Hosted by IEEE</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://events.vtools.ieee.org/m/504887" class="event-card poster">
+                        <img src="assets/events/abraham_nn.jpg" alt="Introduction to Neural Networks">
+                        <div class="event-info">
+                            <h3>Introduction to Neural Networks</h3>
+                            <p class="event-date">October 16, 2025</p>
+                            <p class="event-desc">Lecture by Syed Abraham Ahmed</p>
+                        </div>
+                    </a>
+
+                    <div class="event-card">
+                        <img src="assets/events/ieee_day_2025.jpg" alt="IEEE Day Celebration">
+                        <div class="event-info">
+                            <h3>IEEE Day Celebration</h3>
+                            <p class="event-date">October 7, 2025</p>
+                            <!-- <i>First Hardware Hackathon at University of Manitoba</i> -->
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <img src="assets/events/ieee_pes.jpg" alt="IEEE PES Day">
+                        <div class="event-info">
+                            <h3>IEEE PES Day - Earth Day Cleanup</h3>
+                            <p class="event-date">April 22, 2025</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="executives" class="section-white">
+            <div class="container text-center">
+                <h2>Executives Committee</h2>
+                <div class="executives-grid">
+                    <div class="executive-card">
+                        <img src="assets/executives/ghrum.png" alt="Ghrum Yemessghen">
+                        <p class="role">Chair</p>
+                        <p class="name">Ghrum Yemessghen</p>
+                    </div>
+                    <div class="executive-card">
+                        <img src="assets/executives/abraham.png" alt="Syed Abraham Ahmed">
+                        <p class="role">Vice-Chair</p>
+                        <p class="name">Syed Abraham Ahmed</p>
+                    </div>
+                    <div class="executive-card">
+                        <img src="assets/executives/connor.png" alt="Connor Pagtakhan">
+                        <p class="role">Treasurer</p>
+                        <p class="name">Connor Pagtakhan</p>
+                    </div>
+                    <div class="executive-card">
+                        <img src="assets/executives/mj.png" alt="Minjeong (MJ) Kang">
+                        <p class="role">Secretary</p>
+                        <p class="name">Minjeong (MJ) Kang</p>
+                    </div>
+                    <div class="executive-card">
+                        <img src="assets/executives/jonah.png" alt="Jonah St. Hilaire">
+                        <p class="role">Lab Manager</p>
+                        <p class="name">Jonah St. Hilaire</p>
+                    </div>
+                    <div class="executive-card">
+                        <img src="assets/executives/edcel.png" alt="Edcel Abanto">
+                        <p class="role">Lounge Manager</p>
+                        <p class="name">Edcel Abanto</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="section-blue">
+            <div class="container text-center">
+                <h2>Join Us</h2>
+                <p class="section-desc" style="color: white;">Follow these steps to become a UMIEEE member.</p>
+                
+                <div class="join-steps">
+                    <ol>
+                        <li>Navigate to the <a href="https://www.ieee.org/membership_services/membership/join/index.html" target="_blank">Join IEEE webpage</a>.</li>
+                        <li>Select the "JOIN AS A STUDENT” option.</li>
+                        <li>Create your IEEE account and complete your membership order.</li>
+                        <li>Complete our <a href="https://forms.gle/uhmRYXXjPnfHDY2T6" target="_blank">UMIEEE Membership Form</a> (Have your IEEE number ready).</li>
+                        <li>Join the <a href="https://discord.com/invite/JSEJjVHKaF" target="_blank">UMIEEE Discord Server</a>.</li>
+                        <li>Follow our <a href="https://www.instagram.com/ieee_umanitoba/" target="_blank">UMIEEE Instagram</a>.</li>
+                    </ol>
+                </div>
+
+                <div class="join-buttons">
+                    <a href="https://discord.gg/JSEJjVHKaF" target="_blank" class="btn btn-outline">Discord</a>
+                    <a href="https://www.instagram.com/ieee_umanitoba/" target="_blank" class="btn btn-outline">Instagram</a>
+                    <a href="https://forms.gle/uhmRYXXjPnfHDY2T6" target="_blank" class="btn btn-outline">UMIEEE Membership Form</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsors" class="section-white" style="padding-bottom: 0;">
+            <div class="container text-center" style="padding-bottom: 20px;">
+                <h2>Our Sponsors</h2>
+                <p class="section-desc">Thank you for funding the specialized equipment and workspace materials used by UMIEEE members.</p>
+            </div>
+            
+            <div class="marquee-wrapper">
+    <div class="sponsors-track" id="track">
+        <img src="assets/sponsors/eef.webp" alt="EEF">
+        <img src="assets/sponsors/ece_dept.webp" alt="ECE Dept">
+        <img src="assets/sponsors/icf.png" alt="ICF">
+        <img src="assets/sponsors/ieee_winnipeg.webp" alt="IEEE Winnipeg">
+        <img src="assets/sponsors/digikey.webp" alt="Digikey">
+        <img src="assets/sponsors/uofm.png" alt="UofM">
+        <img src="assets/sponsors/egm.png" alt="EGM">
+    </div>
+</div>
         </section>
     </main>
 
     <footer>
-        <p>UMIEEE - University of Manitoba IEEE Student Branch</p>
-        <p>&copy; Copyright 2026 UMIEEE, All rights reserved.</p>
-        <p>A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
+        <div class="footer-container" id="contact">
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>If you have any inquiries regarding our student branch, or would like to reach out to us about our events, please send us an email at
+                <a href="mailto:ieee@umes.mb.ca" class="footer-email">ieee@umes.mb.ca</a>
+                </p>
+                <p class="socials">
+                <a class="socials-icons" href="https://www.instagram.com/ieee_umanitoba/"><i class="bi-instagram"></i></a>
+                <a class="socials-icons" href="https://www.linkedin.com/company/umieee/posts/?feedView=all"><i class="bi-linkedin"></i></a>
+                <a class="socials-icons" href="https://discord.com/invite/JSEJjVHKaF"><i class="bi-discord"></i></a>
+                <a class="socials-icons" href="https://www.youtube.com/@umieee"><i class="bi-youtube"></i></a>
+                <a class="socials-icons" href="https://github.com/umanitoba-ieee/"><i class="bi-github"></i></a>
+
+                </p>
+
+                <h3 style="margin-top: 30px;">Quick Links</h3>
+                <div class="footer-links">
+                    <a href="https://site.ieee.org/winnipeg/" target="_blank">IEEE Winnipeg Section</a>
+                    <a href="https://ieeecanada.org/" target="_blank">IEEE Canada</a>
+                    <a href="https://wie.ieee.org/" target="_blank">IEEE Women in Engineering</a>
+                    <a href="https://www.ieee.org/" target="_blank">IEEE Global</a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Address</h3>
+                <p class="bold-text">The Institute of Electrical and Electronics Engineers</p>
+                <p>University of Manitoba Student Branch</p>
+                <br>
+                <p>Engineering & Information Technology Complex (EITC)</p>
+                <p>EITC E1-513, E1-514</p>
+                <p>75A Chancellors Circle</p>
+                <p>University of Manitoba</p>
+                <p>Winnipeg, Manitoba, R3T 5V6</p>
+            </div>
+            
+            <div class="footer-col">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.080517926214!2d-97.1356391!3d49.8093373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea76b0b0bbbbbb%3A0x8e5f29c488346e09!2sEngineering%20and%20Information%20Technology%20Complex%20(EITC)!5e0!3m2!1sen!2sca!4v1713000000000!5m2!1sen!2sca" 
+                    width="100%" 
+                    height="250" 
+                    style="border:0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; Copyright 2026 UMIEEE, All rights reserved.</p>
+            <p>A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
+        </div>
     </footer>
+
+<script>
+const track = document.getElementById('track');
+const initialContent = track.innerHTML;
+track.innerHTML += initialContent;
+const fillMarquee = () => {
+    while (track.offsetWidth < window.innerWidth * 2) {
+        track.innerHTML += initialContent;
+    }
+};
+
+fillMarquee();
+window.addEventListener('resize', fillMarquee);
+</script>
 </body>
 </html>
