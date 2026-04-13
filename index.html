@@ -44,7 +44,14 @@
                     </div>
                 </div>
                 <div class="hero-image-side">
-                    <img src="assets/ieeextreme.jpg" alt="UMIEEE Team at IEEEXtreme">
+                    <div class="fade-gallery">
+                        <img class="active" src="assets/ieeextreme.jpg" alt="UMIEEE Team at IEEEXtreme">
+                        <img src="assets/events/ieee_day_2025.jpg" alt="">
+                        <img src="assets/events/umake.jpg" alt="">
+                        <img src="assets/lounge_0.jpg" alt="">
+                        <img src="assets/events/ieeex_19.0.jpg" alt="IEEEXtreme 19.0">
+                        <img src="assets/events/ieee_day_2025_1.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -82,8 +89,12 @@
                         </ul>
                     </div>
                     <div class="advantage-card">
-                        <h3>Lab Area</h3>
-                        <p>A fully-equipped electronics laboratory for your projects.</p>
+                        <h3>McNaughton Centre Lab</h3>
+                        <!-- <p>A fully-equipped electronics laboratory for your projects.</p> -->
+                        <!-- <p>The McNaughton Centre is a student run lab available to all members of the University of Manitoba IEEE student branch. 
+                            The laboratory is equipped with basic electronics equipment concurrent with U of M labs.</p> -->
+                        <p>The McNaughton Centre concept was pioneered at the University of Manitoba by Ted Glass, 
+                            IEEE Regional Director in 1978-1979. It is the first McNaughton Centre established.</p>
                         <ul class="advantage-list">
                             <li>Soldering equipment and stations</li>
                             <li>Arduino boards & Raspberry Pi's</li>
@@ -95,7 +106,8 @@
                         <p>Additional benefits of being a UMIEEE member.</p>
                         <ul class="advantage-list">
                             <li>Free-of-charge secure lockers</li>
-                            <li>Partnerships with <a style="font-weight: bold; text-decoration: none; color: inherit;" href="https://umrt.ca/">UMRT</a>, 
+                            <li>Partnerships with 
+                                <a style="font-weight: bold; text-decoration: none; color: inherit;" href="https://umrt.ca/">UMRT</a>, 
                                 <a style="font-weight: bold; text-decoration: none; color: inherit;" href="https://umsats.ca/">UMSATS</a>,  
                                 <a style="font-weight: bold; text-decoration: none; color: inherit;" href="https://www.umsae.com/">UMSAE</a>,  
                             <li>Discounted or free workshop entry</li>
@@ -325,6 +337,28 @@ const fillMarquee = () => {
 
 fillMarquee();
 window.addEventListener('resize', fillMarquee);
+
+
+const IMAGE_TRANSITION_TIME = 5000; // 5 seconds
+
+function startGalleries() {
+    const galleries = document.querySelectorAll('.fade-gallery');
+
+    galleries.forEach(gallery => {
+        const images = gallery.querySelectorAll('img');
+        let currentIndex = 0;
+
+        if (images.length <= 1) return;
+
+        setInterval(() => {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }, IMAGE_TRANSITION_TIME);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', startGalleries);
 </script>
 </body>
 </html>

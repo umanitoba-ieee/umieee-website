@@ -185,6 +185,9 @@ section {
     align-items: center;
     text-align: center;
 }
+/* #intro .hero-text {
+    padding: 0 50px;
+} */
 
 .hero-content {
     max-width: 800px;
@@ -192,13 +195,14 @@ section {
 }
 
 #intro #logo {
-    height: 120px;
-    margin-bottom: 20px;
+    height: 180px;
+    margin-bottom: 10px;
 }
 
 #intro h1 {
     font-size: 3rem;
-    margin-bottom: 5px;
+    line-height: 3rlh;
+    margin-bottom: 0;
 }
 
 .subtitle {
@@ -598,7 +602,6 @@ footer {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* RESPONSIVE FIX (Crucial) */
 @media (max-width: 900px) {
     .split-container, .image-gallery-row {
         flex-direction: column; /* Stacks them back on mobile/tablet */
@@ -612,3 +615,68 @@ footer {
         width: 100%;
     }
 }
+@media (max-width: 900px) {
+    .split-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-image-side {
+        width: 100%;
+        min-width: unset; /* Let it fill the screen width */
+    }
+
+    .fade-gallery {
+        aspect-ratio: 4 / 3; /* Slightly taller on mobile looks better */
+        margin-top: 30px;
+    }
+}
+
+/* FADE GALLERY CONTAINER */
+.fade-gallery {
+    position: relative;
+    /* position: inherit; */
+    width: 100%;
+    height: 450px;
+    /* max-width: 80vw; */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    aspect-ratio: 4 / 3;
+}
+
+.fade-gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    opacity: 0;
+    /* transition: opacity 1s ease-in-out; */
+    transition: opacity 1.5s ease-in-out;
+    /* animation: imageFade 16s infinite; */
+    z-index: 1;
+}
+
+.fade-gallery img.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* STAGGERING THE IMAGES */
+/* If you have 3 images, divide total time (12s) by 3 = 4s delay each */
+/* .fade-gallery img:nth-child(1) { animation-delay: 0s; }
+.fade-gallery img:nth-child(2) { animation-delay: 3s; }
+.fade-gallery img:nth-child(3) { animation-delay: 6s; }
+.fade-gallery img:nth-child(4) { animation-delay: 9s; } */
+
+/* THE FADE ANIMATION */
+/* @keyframes imageFade {
+    0% { opacity: 0; }
+    2% { opacity: 1; } 
+    25% { opacity: 1; }
+    27% { opacity: 0; }
+    100% { opacity: 0; }
+} */
