@@ -38,41 +38,29 @@ const events = (await getCollection('events'))
 </div>
 
 <script>
-  const wrapper = document.currentScript?.closest('.events-scroll-wrapper');
+  const scrollers = document.querySelectorAll('.events-scroll-wrapper');
 
-  if (wrapper) {
+  scrollers.forEach((wrapper) => {
     const container = wrapper.querySelector('.events-container');
     const leftButton = wrapper.querySelector('.events-scroll-arrow.left');
     const rightButton = wrapper.querySelector('.events-scroll-arrow.right');
 
-    if (container && leftButton && rightButton) {
-      const getScrollAmount = () => {
-        const card = container.querySelector('.event-card');
+    if (!container || !leftButton || !rightButton) return;
 
-        if (!card) return 0;
+    const getScrollDistance = () => container.clientWidth * 0.66;
 
-        const cardWidth = card.getBoundingClientRect().width;
-        const styles = window.getComputedStyle(container);
-        const gap = parseFloat(styles.columnGap || styles.gap) || 0;
-
-        return cardWidth + gap;
-      };
-
-      leftButton.addEventListener('click', () => {
-        container.scrollBy({
-          left: -getScrollAmount(),
-          // left: -50,
-          behavior: 'smooth',
-        });
+    leftButton.addEventListener('click', () => {
+      container.scrollBy({
+        left: -getScrollDistance(),
+        behavior: 'smooth',
       });
+    });
 
-      rightButton.addEventListener('click', () => {
-        container.scrollBy({
-          left: getScrollAmount(),
-          // left: 50,
-          behavior: 'smooth',
-        });
+    rightButton.addEventListener('click', () => {
+      container.scrollBy({
+        left: getScrollDistance(),
+        behavior: 'smooth',
       });
-    }
-  }
+    });
+  });
 </script>

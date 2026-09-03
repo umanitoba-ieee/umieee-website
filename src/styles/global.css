@@ -154,15 +154,19 @@ nav a:hover { color: var(--primary-blue); }
   gap: 25px;
   width: 100%;
   min-width: 0;
-  padding: 0 5vw;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
 }
-.events-container::-webkit-scrollbar { display: none; }
-.events-container::after { content: ''; flex: 0 0 80px; }
+
+.events-container::-webkit-scrollbar {
+  display: none;
+}
+.events-container::before { content: ''; flex: 0 0 40px; }
+.events-container::after { content: ''; flex: 0 0 40px; }
 .event-card {
   flex: 0 0 320px;
   background: var(--white);
