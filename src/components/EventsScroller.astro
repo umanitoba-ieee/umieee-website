@@ -17,7 +17,14 @@ const events = (await getCollection('events'))
 
   <div class="events-container">
     {events.map((event) => (
-      <EventCard event={event} />
+      <EventCard 
+          title={event.data.title}
+          date={event.data.date}
+          description={event.data.description}
+          image={event.data.image}
+          href={event.data.href}
+          poster={event.data.poster}
+      />
     ))}
   </div>
 

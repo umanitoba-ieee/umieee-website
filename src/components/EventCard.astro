@@ -1,19 +1,17 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 
-type Props = {
-  event: CollectionEntry<'events'>;
-};
-
-const { event } = Astro.props;
-const { title, date, description, image, href, poster } = event.data;
-const imageUrl = new URL(`../content/events/${image}`, import.meta.url).pathname;
+const { title, date, description, image, href, poster } = Astro.props;
 ---
 
 {href ? (
-  <a href={href} target="_blank" rel="noopener noreferrer"
-     class:list={['event-card', { poster }]}>
-    <img src={imageUrl} alt={title} />
+  <a
+    class="event-card"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src={image} alt={title} />
     <div class="event-info">
       <h3>{title}</h3>
       <p class="event-date">{date}</p>
@@ -21,8 +19,8 @@ const imageUrl = new URL(`../content/events/${image}`, import.meta.url).pathname
     </div>
   </a>
 ) : (
-  <div class:list={['event-card', { poster }]}>
-    <img src={imageUrl} alt={title} />
+  <div class="event-card">
+    <Image src={image} alt={title} />
     <div class="event-info">
       <h3>{title}</h3>
       <p class="event-date">{date}</p>

@@ -1,18 +1,21 @@
 ---
-interface Props {
-  name: string;
-  image: string;
-  href?: string;
-}
+import { Image } from 'astro:assets';
 
 const { name, image, href } = Astro.props;
 ---
+
 {href ? (
-  <a href={href} target="_blank" rel="noopener noreferrer" aria-label={name} class="sponsor-link">
-    <img src={image} alt={name} loading="lazy" />
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={name}
+    class="sponsor-link"
+  >
+    <Image src={image} alt={name} />
   </a>
 ) : (
   <span class="sponsor-link" aria-label={name}>
-    <img src={image} alt={name} loading="lazy" />
+    <Image src={image} alt={name} />
   </span>
 )}
