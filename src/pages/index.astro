@@ -1,0 +1,168 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FadeGallery from '../components/FadeGallery.astro';
+import EventsScroller from '../components/EventsScroller.astro';
+import ExecutiveCard from '../components/ExecutiveCard.astro';
+import Sponsor from '../components/Sponsor.astro';
+
+const executives = (await getCollection('executives')).sort((a, b) => a.data.order - b.data.order);
+const sponsors = (await getCollection('sponsors')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout>
+  <Header />
+
+  <main>
+    <section id="intro" class="section-white">
+      <div class="container split-container">
+        <div class="hero-text">
+          <img id="logo" src="/assets/logo_no_text.svg" alt="IEEE Logo" />
+          <h1>University Of Manitoba</h1>
+          <h2 class="subtitle">IEEE Student Branch</h2>
+          <div class="hero-actions">
+            <a href="#join" class="btn btn-primary">Become a Member</a>
+            <a href="#contact" class="btn btn-primary">Contact Us</a>
+          </div>
+        </div>
+        <div class="hero-image-side">
+          <FadeGallery />
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="section-blue">
+      <div class="container split-container reverse">
+        <div class="split-text">
+          <h2>Our Mission</h2>
+          <div class="mission-text">
+            <p>University of Manitoba Institute of Electrical and Electronics Engineers Student Branch (UMIEEE) is a non-profit organization managed by a team of dedicated student volunteers. Our mission is to provide students with the space and equipment necessary to maximize learning opportunities and enhance education. UMIEEE provides a laboratory environment congruent to the Electrical and Computer Engineering labs operated by the University of Manitoba, enabling students to expand their knowledge outside of the classroom.</p>
+            <p>UMIEEE strives to engage students through workshops and networking events, enriching knowledge and developing professional communication skills. Each academic year we host technical workshops covering Arduino, Raspberry Pi, embedded devices, and LaTeX typesetting. Our networking events connect students directly with professional practicing engineers.</p>
+          </div>
+        </div>
+        <div class="split-image">
+          <img src="/assets/workshop.png" alt="UMIEEE Workshop" class="feature-image" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section-white">
+      <div class="container text-center">
+        <h2>IEEE Advantages</h2>
+        <p class="section-desc">Members of the University of Manitoba IEEE branch are offered several exclusive benefits and spaces.</p>
+
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <h3>Lounge Area</h3>
+            <p>A dedicated space for studying, relaxing, and hanging out.</p>
+            <ul class="advantage-list">
+              <li>Canteen (prices posted inside)</li>
+              <li>Classroom whiteboards and markers</li>
+              <li>Massage Chair for stress relief</li>
+              <li>External monitors for productivity</li>
+              <li>Large conference table for meetings</li>
+            </ul>
+          </div>
+          <div class="advantage-card">
+            <h3>McNaughton Centre Lab</h3>
+            <p>The McNaughton Centre concept was pioneered at the University of Manitoba by Ted Glass, IEEE Regional Director in 1978-1979. It is the first McNaughton Centre established.</p>
+            <ul class="advantage-list">
+              <li>Soldering equipment and stations</li>
+              <li>Arduino boards &amp; Raspberry Pi's</li>
+              <li>High-performance computer access</li>
+            </ul>
+          </div>
+          <div class="advantage-card">
+            <h3>Extra Perks</h3>
+            <p>Additional benefits of being a UMIEEE member.</p>
+            <ul class="advantage-list">
+              <li>Free-of-charge secure lockers</li>
+              <li>
+                Partnerships with
+                <a href="https://umrt.ca/">UMRT</a>,
+                <a href="https://umsats.ca/">UMSATS</a>,
+                <a href="https://www.umsae.com/">UMSAE</a>
+              </li>
+              <li>Discounted or free workshop entry</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="image-gallery-row">
+          <img src="/assets/lab.jpg" alt="Lab Work" class="feature-image" loading="lazy" />
+          <img src="/assets/lounge.jpg" alt="UMIEEE Lounge" class="feature-image" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="section-light-gray">
+      <div class="container text-center">
+        <h2>Event Highlights</h2>
+        <p class="section-desc">
+          Take a look at some of the recent workshops and competitions hosted by our branch.
+        </p>
+      </div>
+
+      <EventsScroller />
+    </section>
+
+    <section id="executives" class="section-white">
+      <div class="container text-center">
+        <h2>Executives Committee</h2>
+        <div class="executives-grid">
+          {executives.map((executive) => (
+            <ExecutiveCard
+              name={executive.data.name}
+              role={executive.data.role}
+              image={executive.data.image}
+              href={executive.data.href}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section-blue">
+      <div class="container text-center">
+        <h2>Join Us</h2>
+        <p class="section-desc section-desc-light">Follow these steps to become a UMIEEE member.</p>
+
+        <div class="join-steps">
+          <ol>
+            <li>Navigate to the <a href="https://www.ieee.org/membership_services/membership/join/index.html" target="_blank" rel="noopener noreferrer">Join IEEE webpage</a>.</li>
+            <li>Select the "JOIN AS A STUDENT” option.</li>
+            <li>Create your IEEE account and complete your membership order.</li>
+            <li>Complete our <a href="https://forms.gle/uhmRYXXjPnfHDY2T6" target="_blank" rel="noopener noreferrer">UMIEEE Membership Form</a> (Have your IEEE number ready).</li>
+            <li>Join the <a href="https://discord.com/invite/JSEJjVHKaF" target="_blank" rel="noopener noreferrer">UMIEEE Discord Server</a>.</li>
+            <li>Follow our <a href="https://www.instagram.com/ieee_umanitoba/" target="_blank" rel="noopener noreferrer">UMIEEE Instagram</a>.</li>
+          </ol>
+        </div>
+
+        <div class="join-buttons">
+          <a href="https://discord.gg/JSEJjVHKaF" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Discord</a>
+          <a href="https://www.instagram.com/ieee_umanitoba/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Instagram</a>
+          <a href="https://forms.gle/uhmRYXXjPnfHDY2T6" target="_blank" rel="noopener noreferrer" class="btn btn-outline">UMIEEE Membership Form</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsors" class="section-white sponsors-section">
+      <div class="container text-center sponsors-heading">
+        <h2>Our Sponsors</h2>
+        <p class="section-desc">Thank you for funding the specialized equipment and workspace materials used by UMIEEE members.</p>
+      </div>
+
+      <div class="marquee-wrapper">
+        <div class="sponsors-track">
+          {[...sponsors, ...sponsors].map((sponsor) => (
+            <Sponsor name={sponsor.data.name} image={sponsor.data.image} href={sponsor.data.href} />
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

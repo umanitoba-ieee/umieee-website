@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import EventCard from './EventCard.astro';
+
+const events = (await getCollection('events'))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<div class="events-scroll-wrapper">
+  <button
+    class="events-scroll-arrow left"
+    type="button"
+    aria-label="Scroll event highlights left"
+  >
+    <i class="bi bi-chevron-left" aria-hidden="true"></i>
+  </button>
+
+  <div class="events-container">
+    {events.map((event) => (
+      <EventCard event={event} />
+    ))}
+  </div>
+
+  <button
+    class="events-scroll-arrow right"
+    type="button"
+    aria-label="Scroll event highlights right"
+  >
+    <i class="bi bi-chevron-right" aria-hidden="true"></i>
+  </button>
+</div>

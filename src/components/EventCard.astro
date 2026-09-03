@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type Props = {
+  event: CollectionEntry<'events'>;
+};
+
+const { event } = Astro.props;
+const { title, date, description, image, href, poster } = event.data;
+const imageUrl = new URL(`../content/events/${image}`, import.meta.url).pathname;
+---
+
+{href ? (
+  <a href={href} target="_blank" rel="noopener noreferrer"
+     class:list={['event-card', { poster }]}>
+    <img src={imageUrl} alt={title} />
+    <div class="event-info">
+      <h3>{title}</h3>
+      <p class="event-date">{date}</p>
+      {description && <p class="event-desc">{description}</p>}
+    </div>
+  </a>
+) : (
+  <div class:list={['event-card', { poster }]}>
+    <img src={imageUrl} alt={title} />
+    <div class="event-info">
+      <h3>{title}</h3>
+      <p class="event-date">{date}</p>
+      {description && <p class="event-desc">{description}</p>}
+    </div>
+  </div>
+)}

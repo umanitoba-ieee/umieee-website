@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+const { name, role, image, href } = Astro.props;
+---
+
+{href ? (
+  <a
+    class="executive-card"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src={image} alt={name} />
+    <p class="role">{role}</p>
+    <p class="name">{name}</p>
+  </a>
+) : (
+  <div class="executive-card">
+    <Image src={image} alt={name} />
+    <p class="role">{role}</p>
+    <p class="name">{name}</p>
+  </div>
+)}
