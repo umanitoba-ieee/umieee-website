@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 5
 title: Black Hole Social
 date: January 30, 2026
 image: ./blackhole.jpg

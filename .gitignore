@@ -1,4 +1,39 @@
+# Dependencies
 node_modules/
+
+# Production build output
 dist/
+
+# Astro cache and generated types (Content Collections, etc.)
 .astro/
+
+# Local environment variables and secrets
+.env
+*.env
+.env.local
+.env.*.local
+
+# Serverless / Hosting platforms cache and builds
+.vercel/
+.netlify/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS metadata
 .DS_Store
+Thumbs.db
