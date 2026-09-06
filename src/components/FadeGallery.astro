@@ -1,0 +1,23 @@
+<div class="fade-gallery" data-fade-gallery>
+  <img class="active" src="/assets/ieeextreme.jpg" alt="UMIEEE Team at IEEEXtreme" />
+  <img src="/assets/events/ieee_day_2025.jpg" alt="" />
+  <img src="/assets/events/umake.jpg" alt="" />
+  <img src="/assets/lounge_0.jpg" alt="" />
+  <img src="/assets/events/ieeex_19.0.jpg" alt="IEEEXtreme 19.0" />
+  <img src="/assets/events/ieee_day_2025_1.jpg" alt="" />
+</div>
+
+<script>
+  const IMAGE_TRANSITION_TIME = 5000;
+  document.querySelectorAll<HTMLElement>('[data-fade-gallery]').forEach((gallery) => {
+    const images = Array.from(gallery.querySelectorAll<HTMLImageElement>('img'));
+    let currentIndex = 0;
+    if (images.length <= 1) return;
+
+    window.setInterval(() => {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }, IMAGE_TRANSITION_TIME);
+  });
+</script>

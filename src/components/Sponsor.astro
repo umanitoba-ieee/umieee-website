@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+
+const { name, image, href } = Astro.props;
+---
+
+{href ? (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={name}
+    class="sponsor-link"
+  >
+    <Image src={image} alt={name} />
+  </a>
+) : (
+  <span class="sponsor-link" aria-label={name}>
+    <Image src={image} alt={name} />
+  </span>
+)}

@@ -1,0 +1,40 @@
+<header class="site-header">
+  <div class="banner">
+    <a href="#" class="logo-link" aria-label="UMIEEE home">
+      <img src="/assets/logo_umieee.png" alt="UMIEEE Logo" />
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+      <i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+
+    <nav id="mobile-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="#mission">Our Mission</a></li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#executives">Executives</a></li>
+        <li><a href="#join" class="nav-join-btn">Join Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const mobileNav = document.querySelector<HTMLElement>('#mobile-nav');
+
+  menuToggle?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.toggle('open') ?? false;
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  });
+
+  mobileNav?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+      menuToggle?.setAttribute('aria-label', 'Open navigation');
+    });
+  });
+</script>

@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import EventCard from './EventCard.astro';
+
+const events = (await getCollection('events'))
+  .sort((a, b) => b.data.order - a.data.order);
+---
+
+<div class="events-scroll-wrapper">
+  <button
+    class="events-scroll-arrow left"
+    type="button"
+    aria-label="Scroll event highlights left"
+  >
+    <i class="bi bi-chevron-left" aria-hidden="true"></i>
+  </button>
+
+  <div class="events-container">
+    {events.map((event) => (
+      <EventCard
+        title={event.data.title}
+        date={event.data.date}
+        description={event.data.description}
+        image={event.data.image}
+        href={event.data.href}
+        poster={event.data.poster}
+      />
+    ))}
+  </div>
+
+  <button
+    class="events-scroll-arrow right"
+    type="button"
+    aria-label="Scroll event highlights right"
+  >
+    <i class="bi bi-chevron-right" aria-hidden="true"></i>
+  </button>
+</div>
+
+<script>
+  const scrollers = document.querySelectorAll('.events-scroll-wrapper');
+
+  scrollers.forEach((wrapper) => {
+    const container = wrapper.querySelector('.events-container');
+    const leftButton = wrapper.querySelector('.events-scroll-arrow.left');
+    const rightButton = wrapper.querySelector('.events-scroll-arrow.right');
+
+    if (!container || !leftButton || !rightButton) return;
+
+    const getScrollDistance = () => container.clientWidth * 0.66;
+
+    leftButton.addEventListener('click', () => {
+      container.scrollBy({
+        left: -getScrollDistance(),
+        behavior: 'smooth',
+      });
+    });
+
+    rightButton.addEventListener('click', () => {
+      container.scrollBy({
+        left: getScrollDistance(),
+        behavior: 'smooth',
+      });
+    });
+  });
+</script>

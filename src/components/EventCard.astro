@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+
+const { title, date, description, image, href, poster } = Astro.props;
+---
+
+{href ? (
+  <a
+    class="event-card"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image src={image} alt={title} />
+    <div class="event-info">
+      <h3>{title}</h3>
+      <p class="event-date">{date}</p>
+      {description && <p class="event-desc">{description}</p>}
+    </div>
+  </a>
+) : (
+  <div class="event-card">
+    <Image src={image} alt={title} />
+    <div class="event-info">
+      <h3>{title}</h3>
+      <p class="event-date">{date}</p>
+      {description && <p class="event-desc">{description}</p>}
+    </div>
+  </div>
+)}
