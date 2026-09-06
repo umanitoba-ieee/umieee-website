@@ -35,15 +35,15 @@ const sponsors = (await getCollection('sponsors')).sort((a, b) => a.data.order -
 
     <section id="mission" class="section-blue">
       <div class="container split-container reverse">
+        <div class="split-image">
+          <img src="/assets/workshop.png" alt="UMIEEE Workshop" class="feature-image" loading="lazy" />
+        </div>
         <div class="split-text">
           <h2>Our Mission</h2>
           <div class="mission-text">
             <p>University of Manitoba Institute of Electrical and Electronics Engineers Student Branch (UMIEEE) is a non-profit organization managed by a team of dedicated student volunteers. Our mission is to provide students with the space and equipment necessary to maximize learning opportunities and enhance education. UMIEEE provides a laboratory environment congruent to the Electrical and Computer Engineering labs operated by the University of Manitoba, enabling students to expand their knowledge outside of the classroom.</p>
             <p>UMIEEE strives to engage students through workshops and networking events, enriching knowledge and developing professional communication skills. Each academic year we host technical workshops covering Arduino, Raspberry Pi, embedded devices, and LaTeX typesetting. Our networking events connect students directly with professional practicing engineers.</p>
           </div>
-        </div>
-        <div class="split-image">
-          <img src="/assets/workshop.png" alt="UMIEEE Workshop" class="feature-image" loading="lazy" />
         </div>
       </div>
     </section>
@@ -60,7 +60,7 @@ const sponsors = (await getCollection('sponsors')).sort((a, b) => a.data.order -
             <ul class="advantage-list">
               <li>Canteen (prices posted inside)</li>
               <li>Classroom whiteboards and markers</li>
-              <li>Massage Chair for stress relief</li>
+              <li>Massage chair for stress relief</li>
               <li>External monitors for productivity</li>
               <li>Large conference table for meetings</li>
             </ul>
@@ -80,10 +80,7 @@ const sponsors = (await getCollection('sponsors')).sort((a, b) => a.data.order -
             <ul class="advantage-list">
               <li>Free-of-charge secure lockers</li>
               <li>
-                Partnerships with
-                <a href="https://umrt.ca/">UMRT</a>,
-                <a href="https://umsats.ca/">UMSATS</a>,
-                <a href="https://www.umsae.com/">UMSAE</a>
+                Partnerships with <a href="https://umrt.ca/">UMRT</a>, <a href="https://umsats.ca/">UMSATS</a>, <a href="https://www.umsae.com/">UMSAE</a>
               </li>
               <li>Discounted or free workshop entry</li>
             </ul>
