@@ -24,7 +24,6 @@ const sponsors = defineCollection({
   }),
   schema: ({ image }) =>
     z.object({
-      order: z.number(),
       name: z.string(),
       image: image(),
       href: z.string().url().optional(),

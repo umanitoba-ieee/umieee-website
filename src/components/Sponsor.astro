@@ -11,11 +11,12 @@ const { name, image, href } = Astro.props;
     rel="noopener noreferrer"
     aria-label={name}
     class="sponsor-link"
+    title={name}
   >
     <Image src={image} alt={name} />
   </a>
 ) : (
-  <span class="sponsor-link" aria-label={name}>
+  <span class="sponsor-link" aria-label={name} title={name} >
     <Image src={image} alt={name} />
   </span>
 )}
