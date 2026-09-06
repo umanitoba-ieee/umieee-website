@@ -9,7 +9,7 @@ import ExecutiveCard from '../components/ExecutiveCard.astro';
 import Sponsor from '../components/Sponsor.astro';
 
 const executives = (await getCollection('executives')).sort((a, b) => a.data.order - b.data.order);
-const sponsors = (await getCollection('sponsors')).sort((a, b) => a.data.order - b.data.order);
+const sponsors = await getCollection('sponsors');
 ---
 
 <Layout>
